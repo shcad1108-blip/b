@@ -20,11 +20,10 @@ st.markdown("""
     }
 
     /* 3. 버튼 텍스트 크기 및 간격 최적화 */
-    .stButton button {
+   .stButton button {
         width: 100% !important;
-        padding: 2px 2px !important;
-        font-size: 11px !important;
-        white-space: nowrap;
+        margin: 0px !important;
+        padding: 5px 0px !important; /* 위아래 패딩만 남기고 좌우는 제거 */
     }
     </style>
     """, unsafe_allow_html=True)
