@@ -16,6 +16,7 @@ st.markdown("""
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         overflow-x: auto; /* 화면이 아주 작으면 가로 스크롤 허용 */
+        gap: 2px !important;
     }
 
     /* 3. 버튼 텍스트 크기 및 간격 최적화 */
