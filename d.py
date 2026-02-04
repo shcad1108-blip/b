@@ -28,16 +28,21 @@ def getp(y1,m1,d1):
             r.append(i)
     return r,c
 
-@st.dialog("데이터 수정하기")
+@st.dialog("일정")
 def popup():
     st.write(f'{m}월{d}일')
     z,x=getp(y,m,d)
-    st.write(f'일정{z[0]} 메모{z[1]} 시간{z[2]}')
+    if len(z)==0:
+        st.write('')
+    else:
+        for i in z:
+
+            st.write(f'일정:{i['일정']} 메모:{i['메모']} 시간:{i['시간']}')
 if st.session_state.page=='main':
 
     st.header('대충달력이름')
     b1,b2,b3=st.columns(3)
-    if b1.button('<'):
+    if b1.button('⬅'):
         m-=1
         if m==0:
             m=12
@@ -45,7 +50,7 @@ if st.session_state.page=='main':
         st.session_state.y = y
         st.session_state.m = m
         st.rerun()
-    if b3.button('>'):
+    if b3.button('➡'):
         m+=1
         if m==13:
             m=1
