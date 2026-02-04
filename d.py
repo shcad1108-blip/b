@@ -22,7 +22,7 @@ st.markdown("""
     /* 3. 버튼 텍스트 크기 및 간격 최적화 */
     .stButton button {
         width: 100% !important;
-        padding: 5px 2px !important;
+        padding: 2px 2px !important;
         font-size: 11px !important;
         white-space: nowrap;
     }
