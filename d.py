@@ -1,19 +1,29 @@
 import streamlit as st
 import calendar
 from datetime import datetime,date,time
-st.set_page_config(layout="wide")
 st.markdown("""
     <style>
-    /* 모바일에서도 컬럼이 세로로 쌓이지 않고 가로를 유지하게 함 */
+    /* 1. 컬럼 컨테이너의 가로 정렬 유지 */
     [data-testid="column"] {
-        flex: 1 1 0% !important;
-        min-width: 0px !important;
+        width: calc(14.28% - 1rem) !important;
+        flex: 1 1 calc(14.28% - 1rem) !important;
+        min-width: 40px !important; /* 버튼이 들어갈 최소 너비 */
     }
-    /* 버튼 내부 텍스트 크기 조절 (모바일 배려) */
+
+    /* 2. 모바일에서 세로로 쌓이는 것 방지 */
+    [data-testid="stHorizontalBlock"] {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto; /* 화면이 아주 작으면 가로 스크롤 허용 */
+    }
+
+    /* 3. 버튼 텍스트 크기 및 간격 최적화 */
     .stButton button {
-        width: 100%;
-        padding: 0px;
-        font-size: 10px !important;
+        width: 100% !important;
+        padding: 5px 2px !important;
+        font-size: 11px !important;
+        white-space: nowrap;
     }
     </style>
     """, unsafe_allow_html=True)
