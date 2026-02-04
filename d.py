@@ -3,24 +3,23 @@ import calendar
 from datetime import datetime,date,time
 st.markdown("""
     <style>
-    /* 1. 컬럼 컨테이너의 가로 정렬 유지 */
-    [data-testid="column"] {
-        width: calc(14.28% - 1rem) !important;
-        flex: 1 1 calc(14.28% - 1rem) !important;
-        min-width: 40px !important; /* 버튼이 들어갈 최소 너비 */
-    }
-
-    /* 2. 모바일에서 세로로 쌓이는 것 방지 */
+    /* 1. 컬럼 사이의 간격(Gap)을 최소화 */
     [data-testid="stHorizontalBlock"] {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        overflow-x: auto; /* 화면이 아주 작으면 가로 스크롤 허용 */
-        gap: 2px !important;
+        gap: 2px !important; /* 여기서 간격을 조절하세요 (0px도 가능) */
     }
 
-    /* 3. 버튼 텍스트 크기 및 간격 최적화 */
-   .stButton button {
+    /* 2. 각 컬럼의 너비를 균등하게 배분 */
+    [data-testid="column"] {
+        flex: 1 1 0% !important;
+        min-width: 0px !important;
+        padding: 0px !important; /* 컬럼 내부 패딩 제거 */
+    }
+
+    /* 3. 버튼 자체의 여백 제거 */
+    .stButton button {
         width: 100% !important;
         margin: 0px !important;
         padding: 5px 0px !important; /* 위아래 패딩만 남기고 좌우는 제거 */
