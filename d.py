@@ -1,6 +1,22 @@
 import streamlit as st
 import calendar
 from datetime import datetime,date,time
+st.set_page_config(layout="wide")
+st.markdown("""
+    <style>
+    /* 모바일에서도 컬럼이 세로로 쌓이지 않고 가로를 유지하게 함 */
+    [data-testid="column"] {
+        flex: 1 1 0% !important;
+        min-width: 0px !important;
+    }
+    /* 버튼 내부 텍스트 크기 조절 (모바일 배려) */
+    .stButton button {
+        width: 100%;
+        padding: 0px;
+        font-size: 10px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 if 'page' not in st.session_state:
     st.session_state.page='main'
     
