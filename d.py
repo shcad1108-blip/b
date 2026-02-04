@@ -9,6 +9,8 @@ st.markdown("""
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         gap: 2px !important; /* 여기서 간격을 조절하세요 (0px도 가능) */
+        margin: 0px !important;
+        
     }
 
     /* 2. 각 컬럼의 너비를 균등하게 배분 */
