@@ -18,6 +18,7 @@ st.markdown("""
         flex: 1 1 0% !important;
         min-width: 0px !important;
         padding: 0px !important; /* 컬럼 내부 패딩 제거 */
+         margin: 0px !important;
     }
 
     /* 3. 버튼 자체의 여백 제거 */
