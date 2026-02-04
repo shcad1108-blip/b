@@ -37,7 +37,7 @@ def popup():
     else:
         for i in z:
 
-            st.write(f'일정:{i['일정']} 메모:{i['메모']} 시간:{i['시간']}')
+            st.write(f'일정:{i['일정']}, 메모:{i['메모']}, 시간:{i['시간']}')
 if st.session_state.page=='main':
 
     st.header('대충달력이름')
